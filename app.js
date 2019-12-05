@@ -8,6 +8,8 @@ const DB_URL = process.env.DB_URL || 'mongodb://localhost:27017/blog';
 
 const apiVersion = 'v1';
 
+require('dotenv').config();
+
 const app = express();
 
 // ----------------------------------------Middleware----------------------------------------------- //
@@ -17,8 +19,14 @@ app.use(express.urlencoded({extended: false}));
 
 // ----------------------------------------Routes----------------------------------------------- //
 
+// Auth Route
+app.use(`/api/${apiVersion}/auth` , routes.auth);
+
 // Post Route
 app.use(`/api/${apiVersion}/posts`, routes.post);
+
+// User Route
+app.use(`/api/${apiVersion}/users` , routes.user);
 
 
 // ----------------------------------------Start server----------------------------------------------- //
@@ -32,7 +40,6 @@ mongoose.connect(DB_URL, {
 })
     .then(() => {
         console.log('MongoDB connected successfully...!');
-
         app.listen(PORT , () => console.log(`server started at port:${PORT}`));
     })
     .catch(err => console.log(err));
