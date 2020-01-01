@@ -8,13 +8,16 @@
   },
   "dependencies": {
     "@hapi/joi": "^16.1.8",
+    "async-redis": "^1.1.7",
     "bcrypt": "^3.0.7",
     "cookie-parser": "~1.4.4",
+    "cors": "^2.8.5",
     "debug": "~2.6.9",
     "dotenv": "^8.2.0",
     "express": "~4.16.1",
     "jsonwebtoken": "^8.5.1",
-    "mongoose": "",
+    "lodash": "^4.17.15",
+    "mongoose": "^5.7.14",
     "morgan": "~1.9.1",
     "nodemon": "^2.0.1"
   }

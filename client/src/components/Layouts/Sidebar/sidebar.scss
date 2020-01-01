@@ -1,0 +1,13 @@
+.sidebar {
+  border: 1px solid #7661cc;
+  padding: 5px;
+  border-radius: 5px;
+  width: 100%;
+
+  a {
+    color: #7661cc;
+    &.active {
+      background: #7661cc !important;
+    }
+  }
+}

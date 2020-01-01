@@ -1,0 +1,21 @@
+.page-navigation-bar {
+  .btn-navigate {
+    color: white !important;
+    background: #75787d;
+  }
+
+  .select-navigation {
+    box-shadow: 0 0 #75787d;
+    transition: 500ms;
+    border: 1px solid #7661cc;
+
+    &:hover {
+      transform: scale(1.1);
+      box-shadow: 3px 3px #75787d;
+    }
+
+    &:active {
+      border: none;
+    }
+  }
+}

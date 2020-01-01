@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css?family=Bubblegum+Sans|Playfair+Display&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: url("./assets/images/background.png") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  padding-top: 70px;
+}
+
+.space-v-20 {
+  height: 20vh;
+}
+
+a {
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: none;
+  }
+}

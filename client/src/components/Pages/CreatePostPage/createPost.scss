@@ -1,0 +1,16 @@
+.bg-overlay {
+  background: rgba(56, 13, 88, 0.14);
+}
+
+.post-edit-content {
+  border-radius: 10px;
+
+  .form-control {
+    border-color: #280b3e;
+  }
+
+  label {
+    color: #342b5a;
+    font-size: 24px;
+  }
+}

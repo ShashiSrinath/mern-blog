@@ -1,0 +1,21 @@
+.navbar {
+  background: #280b3e;
+  color: white;
+}
+
+.search-box-container {
+  position: relative;
+}
+
+.search-box {
+  border-radius: 20px 20px 20px 20px;
+  padding: 20px;
+}
+
+.search-icon {
+  position: absolute;
+  fill: #75787d;
+  width: 20px;
+  right: 0;
+  margin-right: 20px;
+}

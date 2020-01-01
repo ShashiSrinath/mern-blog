@@ -8,7 +8,18 @@ const categorySchema = new Schema({
         min: 2,
         max: 512,
         unique: true
-    }
+    },
+    featuredImage: {
+        required: true,
+        type: String,
+    },
+    description: {
+        type: String,
+        required: true,
+    },
+    metaDescription: {
+        type: String
+    },
 });
 
 const Category = mongoose.model('Category', categorySchema);

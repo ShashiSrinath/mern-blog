@@ -8,7 +8,7 @@ const tagSchema = new Schema({
         min: 1,
         max: 255,
         unique: true
-    }
+    },
 });
 
 const Tag = mongoose.model('Tag', tagSchema);
