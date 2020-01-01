@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "npm install && node index.js",
+    "start": "npm install && node app.js",
     "heroku-postbuild": "cd client && npm install && npm run build",
     "dev-start": "nodemon ./app.js"
   },

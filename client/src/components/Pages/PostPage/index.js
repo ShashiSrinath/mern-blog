@@ -4,13 +4,14 @@ import './postPage.scss'
 import avatar from '../../../assets/images/avatar.png';
 import {Link, withRouter} from "react-router-dom";
 import Sidebar from "../../Layouts/Sidebar";
+import {config} from "../../../config/constants";
 
 const PostPage = (props) => {
     const [post, setPost] = useState(null);
 
     useEffect(() => {
         const postSlug = props.match.params.slug;
-        axios.get(`http://localhost:4000/api/v1/posts/get-by-slug/${postSlug}`)
+        axios.get(`${config.url.API_URL}/posts/get-by-slug/${postSlug}`)
             .then(res => setPost(res.data))
             .catch(err => console.log(err));
 
