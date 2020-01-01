@@ -7,13 +7,14 @@ const routes = require('./routes');
 require('dotenv').config();
 const PORT = process.env.PORT || 4000;
 const DB_URI = process.env.DB_URI || 'mongodb://localhost:27017/blog';
+const USE_REDIS = process.env.USE_REDIS || false;
 
 const apiVersion = 'v1';
 
 
 
 //clear redis cache
-redis.flushCache();
+if(USE_REDIS) redis.flushCache();
 
 const app = express();
 
@@ -37,7 +38,8 @@ app.use(`/api/${apiVersion}/posts`, routes.post);
 // Category Route
 app.use(`/api/${apiVersion}/categories`, routes.category);
 
-
+// Client Files
+app.use(express.static('./client/build'));
 
 
 // ----------------------------------------Start server----------------------------------------------- //
