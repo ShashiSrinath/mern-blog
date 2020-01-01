@@ -1,10 +1,11 @@
 import React, {createContext, useState} from "react";
 import axios from 'axios';
+import {config} from "../config/constants";
 
 export const GlobalContext = createContext({});
 
 const GlobalState = (props) => {
-    const apiUrl = 'http://localhost:4000/api/v1';
+    const apiUrl = config.url.API_URL;
 
     const [recentPosts, setRecentPosts] = useState({});
     const [recentPostCount, setRecentPostCount] = useState(null);
