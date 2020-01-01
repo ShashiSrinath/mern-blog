@@ -1,4 +1,5 @@
 const express = require('express');
+const path = require('path');
 require('dotenv');
 const mongoose = require('mongoose');
 const cors = require('cors');
@@ -40,6 +41,8 @@ app.use(`/api/${apiVersion}/categories`, routes.category);
 
 // Client Files
 app.use(express.static('./client/build'));
+
+app.get('*', (req, res) => res.sendFile(path.resolve('client', 'build', 'index.html')));
 
 
 // ----------------------------------------Start server----------------------------------------------- //
