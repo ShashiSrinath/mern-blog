@@ -3,11 +3,12 @@ import './App.scss';
 import Navbar from "./components/Layouts/Navbar";
 import {BrowserRouter as Router, Route, Switch} from "react-router-dom";
 import GlobalState from "./context/GlobalState";
-import CategoryListPage from "./components/Pages/CategoryListPage";
-import CategoryPostPage from "./components/Pages/CategoryPostPage";
-import CreatePostPage from "./components/Pages/CreatePostPage";
-import TagPostPage from "./components/Pages/TagPostPage";
+import HomePage from "./components/Pages/HomePage";
 
+const CategoryListPage = lazy(() => import("./components/Pages/CategoryListPage"));
+const CategoryPostPage = lazy (() => import("./components/Pages/CategoryPostPage"));
+const CreatePostPage  =  lazy(() => import("./components/Pages/CreatePostPage"));
+const TagPostPage = lazy(() => import("./components/Pages/TagPostPage"));
 const RecentPage = lazy(() => import('./components/Pages/RecentPage'));
 const PostPage = lazy(() => import("./components/Pages/PostPage"));
 
@@ -23,6 +24,7 @@ function App() {
                         <Suspense  fallback={<div className='d-flex justify-content-center'> <div className="spinner-border" role="status">
                             <span className="sr-only">Loading...</span>
                         </div></div>}>
+                            <Route exact path='/'><HomePage/> </Route>
                             <Route exact path='/recent'><RecentPage/> </Route>
                             <Route exact path='/categories'><CategoryListPage/> </Route>
                             <Route exact path='/category/:name'><CategoryPostPage/> </Route>
