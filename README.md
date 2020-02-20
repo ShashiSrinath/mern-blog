@@ -1,1 +1,1 @@
-mern-blog
+A Blogging platform using MERN Stack
